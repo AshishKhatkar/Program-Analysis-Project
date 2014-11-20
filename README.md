@@ -1,4 +1,4 @@
 Program-Analysis-Project
 ========================
 
-Program Analysis MVCIFG Project
+Program Analysis MVICFG Project
