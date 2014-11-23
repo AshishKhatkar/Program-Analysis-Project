@@ -1,0 +1,80 @@
+public class Version4 {
+  public Version4();
+    Code:
+       0: aload_0       
+       1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+       4: return        
+
+  public static void func(int, int);
+    Code:
+       0: iload_0       
+       1: ifne          19
+       4: iload_1       
+       5: ifne          19
+       8: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      11: ldc           #22                 // String Both integers are zero
+      13: invokevirtual #24                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      16: goto          77
+      19: iload_0       
+      20: ifne          35
+      23: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      26: iload_0       
+      27: iload_1       
+      28: idiv          
+      29: invokevirtual #30                 // Method java/io/PrintStream.println:(I)V
+      32: goto          77
+      35: iload_1       
+      36: ifne          51
+      39: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      42: iload_1       
+      43: iload_0       
+      44: idiv          
+      45: invokevirtual #30                 // Method java/io/PrintStream.println:(I)V
+      48: goto          77
+      51: iload_0       
+      52: iload_1       
+      53: if_icmpge     68
+      56: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      59: iload_1       
+      60: iload_0       
+      61: idiv          
+      62: invokevirtual #30                 // Method java/io/PrintStream.println:(I)V
+      65: goto          77
+      68: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      71: iload_0       
+      72: iload_1       
+      73: idiv          
+      74: invokevirtual #30                 // Method java/io/PrintStream.println:(I)V
+      77: return        
+
+  public static void main(java.lang.String[]) throws java.io.IOException;
+    Code:
+       0: new           #42                 // class java/io/BufferedReader
+       3: dup           
+       4: new           #44                 // class java/io/InputStreamReader
+       7: dup           
+       8: getstatic     #46                 // Field java/lang/System.in:Ljava/io/InputStream;
+      11: invokespecial #50                 // Method java/io/InputStreamReader."<init>":(Ljava/io/InputStream;)V
+      14: invokespecial #53                 // Method java/io/BufferedReader."<init>":(Ljava/io/Reader;)V
+      17: astore_1      
+      18: aload_1       
+      19: invokevirtual #56                 // Method java/io/BufferedReader.readLine:()Ljava/lang/String;
+      22: ldc           #60                 // String  
+      24: invokevirtual #62                 // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+      27: astore_2      
+      28: aload_2       
+      29: iconst_0      
+      30: aaload        
+      31: invokestatic  #68                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+      34: istore_3      
+      35: aload_2       
+      36: iconst_1      
+      37: aaload        
+      38: invokestatic  #68                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+      41: istore        4
+      43: iload_3       
+      44: iload         4
+      46: invokestatic  #74                 // Method func:(II)V
+      49: return        
+}
+
