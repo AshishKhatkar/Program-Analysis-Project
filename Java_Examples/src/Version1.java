@@ -7,6 +7,17 @@
 import java.io.*;
 public class Version1 
 {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void func(int a, int b)
 	{
 		if(a<b)
