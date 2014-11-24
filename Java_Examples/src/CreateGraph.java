@@ -49,7 +49,7 @@ public class CreateGraph
 			InstructionList il = methodGen.getInstructionList();
 			Instruction[] instructions=il.getInstructions();
 			int v=0;
-			System.out.println("CFG FOR : "+methods[i].getName()+"---------------------------------------\n");
+			System.out.println("CFG FOR : "+methods[i].getName()+"\n");
 			ControlFlowGraph cfg = new ControlFlowGraph(methodGen);
 			InstructionContext[] instructionContexts=cfg.getInstructionContexts();
 			int j=0;
