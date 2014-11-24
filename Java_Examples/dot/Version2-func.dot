@@ -1,0 +1,51 @@
+digraph v1 {
+	node [shape=box]
+
+	21 [label="  21: getstatic[178](3) 16"];
+	21 -> 24;
+	30 [label="  30: goto[167](3) -> return"];
+	30 -> 42;
+	26 [label="  26: idiv[108](1)"];
+	26 -> 27;
+	37 [label="  37: iload_1[27](1)"];
+	37 -> 38;
+	25 [label="  25: iload_0[26](1)"];
+	25 -> 26;
+	9 [label="   9: idiv[108](1)"];
+	9 -> 10;
+	33 [label="  33: getstatic[178](3) 16"];
+	33 -> 36;
+	18 [label="  18: if_icmpge[162](3) -> getstatic 16"];
+	18 -> 21;
+	18 -> 33;
+	24 [label="  24: iload_1[27](1)"];
+	24 -> 25;
+	39 [label="  39: invokevirtual[182](3) 22"];
+	39 -> 42;
+	13 [label="  13: goto[167](3) -> return"];
+	13 -> 42;
+	10 [label="  10: invokevirtual[182](3) 22"];
+	10 -> 13;
+	8 [label="   8: iload_1[27](1)"];
+	8 -> 9;
+	36 [label="  36: iload_0[26](1)"];
+	36 -> 37;
+	38 [label="  38: idiv[108](1)"];
+	38 -> 39;
+	17 [label="  17: iload_1[27](1)"];
+	17 -> 18;
+	27 [label="  27: invokevirtual[182](3) 22"];
+	27 -> 30;
+	1 [label="   1: ifne[154](3) -> iload_0"];
+	1 -> 4;
+	1 -> 16;
+	0 [label="   0: iload_0[26](1)"];
+	0 -> 1;
+	42 [label="  42: return[177](1)"];
+	16 [label="  16: iload_0[26](1)"];
+	16 -> 17;
+	4 [label="   4: getstatic[178](3) 16"];
+	4 -> 7;
+	7 [label="   7: iload_0[26](1)"];
+	7 -> 8;
+}
