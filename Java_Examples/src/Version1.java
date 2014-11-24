@@ -14,12 +14,22 @@ public class Version1
 		else
 			System.out.println(a/b);
 	}
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args)
 	{
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		String str[]=br.readLine().split(" ");
-		int a=Integer.parseInt(str[0]);
-		int b=Integer.parseInt(str[1]);
+		String str=null;
+		String str1=null;
+		try
+		{
+			str=br.readLine();
+			str1=br.readLine();
+		}
+		catch(IOException e)
+		{
+			return;
+		}
+		int a=Integer.parseInt(str);
+		int b=Integer.parseInt(str1);
 		func(a,b);
 	}
 }
