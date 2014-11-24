@@ -37,7 +37,7 @@ public class CreateGraph
 	}
 	public static void main(String[] args)throws ClassFormatException, IOException
 	{
-		ClassParser parser=new ClassParser("/home/iiitd/Desktop/ashish/Program-Analysis-Project/Java_Examples/bin/Version4.class");
+		ClassParser parser=new ClassParser("/home/pulkit/Program-Analysis-Project/Java_Examples/bin/Version4.class");
 		JavaClass javaClass=parser.parse();
 		ClassGen classGen=new ClassGen(javaClass);
 		ConstantPoolGen constantPool=new ConstantPoolGen(javaClass.getConstantPool());
