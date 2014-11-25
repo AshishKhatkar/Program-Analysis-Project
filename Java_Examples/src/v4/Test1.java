@@ -2,10 +2,10 @@
  * @author: Ashish Khatkar, Pulkit Manocha, Anindya Srivastava, Masood Pathan
  */
 /*
- * This is version 1
+ * This is version 4
  */
 import java.io.*;
-public class Version4
+public class Test1
 {
 	public static void func(int a, int b)
 	{
