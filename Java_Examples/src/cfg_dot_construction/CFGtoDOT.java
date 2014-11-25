@@ -1,3 +1,4 @@
+package cfg_dot_construction;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;

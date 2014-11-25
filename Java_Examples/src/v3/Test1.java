@@ -4,6 +4,7 @@
 /*
  * This is version 3
  */
+package v3;
 import java.io.*;
 public class Test1
 {
