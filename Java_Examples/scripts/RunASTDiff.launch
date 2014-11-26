@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Java_Examples/src/gov/nasa/impact/RunASTDiff.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gov.nasa.impact.RunASTDiff"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-origSrc /Users/sperson/git/Program-Analysis-Project/Java_Examples/src/v1/Test1.java -modSrc /Users/sperson/git/Program-Analysis-Project/Java_Examples/src/v2/Test1.java -origCls /Users/sperson/git/Program-Analysis-Project/Java_Examples/bin/v1/Test1.class -modCls /Users/sperson/git/Program-Analysis-Project/Java_Examples/bin/v2/Test1.class -dDir /Users/sperson/git/Program-Analysis-Project/Java_Examples/diffDir"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Java_Examples"/>
+</launchConfiguration>
