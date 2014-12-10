@@ -33,8 +33,7 @@ public class CreateGraph
 			{
 				System.out.println("\t\t"+succ_ic.getInstruction().toString(true));
 			}
- 		}
-		
+ 		}	
 	}
 	public static void main(String[] args)throws ClassFormatException, IOException
 	{
