@@ -18,10 +18,6 @@ import net.n3.nanoxml.XMLException;
 import net.n3.nanoxml.XMLParserFactory;
 
 
-/**
- * @author Masood
- */
-
 
 public class MVICFG {
 
@@ -55,6 +51,7 @@ public class MVICFG {
 
     public void addEdge(int src, int dest, int ver, int srcmblock, int destmblock, int sourceMatchBlockLine, int destMatchBlockLine) {
 
+        System.out.println(src + " " + dest + " " + ver);
         if (ver == 1) { // first version
             String sr = "";
             sr += src;
@@ -128,9 +125,29 @@ public class MVICFG {
                     sr += (ver - 1);
 
                     String des = "-1";
+                    
+                    boolean found = false;
+                    String key_map = sr;
+                    for(String k : mapping.keySet())
+                    {
+//                        System.out.print(k + "  :    ");
+                        for(String mpp : mapping.get(k))
+                        {
+                            if(mpp.equals(sr))
+                            {
+                                found = true;
+                                key_map = k;
+                                break;
+                            }
+                        }
+                        if(found)
+                            break;
+//                            System.out.print(mpp + "    ");
+//                        System.out.println();
+                    }
 
                     // updating edge lable  from source to destination
-                    for (Edge e : graph.get(sr)) {
+                    for (Edge e : graph.get(key_map)) {
                         if (e.dest.equals(des)) {
                             e.addVersion(ver);
                             break;
@@ -139,7 +156,7 @@ public class MVICFG {
 
                     // updating edge lable from destination to source
                     for (Edge e : graph.get(des)) {
-                        if (e.dest.equals(sr)) {
+                        if (e.dest.equals(key_map)) {
                             e.addVersion(ver);
                             break;
                         }
@@ -148,7 +165,7 @@ public class MVICFG {
                     map_src += src;
                     map_src += " ver ";
                     map_src += ver;
-                    mapping.get(sr).add(map_src);
+                    mapping.get(key_map).add(map_src);
                 } // else ( dest != -1 )
             } // if (dest == -1)
             else if (destmblock == -1) { // i.e dest is of v2  
@@ -532,7 +549,7 @@ public class MVICFG {
 
     public void runTextDiff() throws ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, XMLException {
         IXMLParser parser = XMLParserFactory.createDefaultXMLParser();
-        IXMLReader reader = StdXMLReader.fileReader("testingSoftware_v1_Test1.xml");
+        IXMLReader reader = StdXMLReader.fileReader("v1_Test1.xml");
         parser.setReader(reader);
         IXMLElement xml = (IXMLElement) parser.parse();
         System.out.println(xml.getFullName());
@@ -545,13 +562,13 @@ public class MVICFG {
         createGraphOriginal(textDiff);
         //create mvicfg v_1-2
         createGraphModified(textDiff, 2);
-//        System.out.println("******* integrating version 3 *********");
-//        //create mvicfg v_1-2-3 v2_Test1
-//        reader = StdXMLReader.fileReader("v2_Test1.xml");
-//        parser.setReader(reader);
-//        xml = (IXMLElement) parser.parse();
-//        textDiff.readFile(xml);
-//        createGraphModified(textDiff, 3);
+        System.out.println("******* integrating version 3 *********");
+        //create mvicfg v_1-2-3 v2_Test1
+        reader = StdXMLReader.fileReader("v2_Test1.xml");
+        parser.setReader(reader);
+        xml = (IXMLElement) parser.parse();
+        textDiff.readFile(xml);
+        createGraphModified(textDiff, 3);
         
     }
     
